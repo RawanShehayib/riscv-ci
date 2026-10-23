@@ -8,7 +8,7 @@ module alu (
 
     always_comb begin
         case (op)
-            4'b0000: result = a + b;          // ADD
+            4'b0001: result = a + b;          // ADD
             4'b0001: result = a - b;          // SUB
             4'b0010: result = a & b;          // AND
 
