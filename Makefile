@@ -1,7 +1,7 @@
 BUILD := build
 RTL := $(wildcard rtl/*.sv)
 
-.PHONY: sim lint clean
+.PHONY: sim lint clean regress 
 
 $(BUILD)/%/sim: tb/%.sv $(RTL)
 	mkdir -p $(BUILD)/$*
@@ -14,3 +14,5 @@ lint:
 
 clean:
 	rm -rf $(BUILD) obj_dir
+regress:
+	python3 scripts/run_regression.py
