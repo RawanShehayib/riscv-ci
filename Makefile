@@ -10,7 +10,7 @@ sim: $(BUILD)/$(TEST)/sim
 	./$(BUILD)/$(TEST)/sim
 
 lint:
-	verilator --lint-only -Wall $(RTL)
+	verilator --lint-only -Wall -Wno-MULTITOP $(RTL)
 
 clean:
 	rm -rf $(BUILD) obj_dir
