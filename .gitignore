@@ -1,2 +1,3 @@
 build/
 .ccache/
+obj_dir/
